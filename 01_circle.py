@@ -1,25 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Есть значение радиуса круга
-radius = 42
 
-# Выведите на консоль значение площади этого круга с точностью до 4-х знаков после запятой
-pi = 3.1415926
-area = pi * radius**2
-print(round(area, 4))
+def solve():
+    radius = 42
 
-# Далее, пусть есть координаты точки
-point_1 = (23, 34)
+    pi = 3.1415926
+    area = pi * radius**2
+    print("Задание 01: Площадь круга")
+    print(round(area, 4))
 
-# Если точка point лежит внутри того самого круга [центр в начале координат (0, 0), radius = 42],
-# то выведите на консоль True, или False, если точка лежит вовне круга.
-x1, y1 = point_1
-distance_1 = (x1**2 + y1**2) ** 0.5
-print(distance_1 <= radius)
+    point_1 = (23, 34)
+    x1, y1 = point_1
+    distance_1 = (x1**2 + y1**2) ** 0.5
+    print(distance_1 <= radius)
 
-# Аналогично для другой точки
-point_2 = (30, 30)
-x2, y2 = point_2
-distance_2 = (x2**2 + y2**2) ** 0.5
-print(distance_2 <= radius)
+    point_2 = (30, 30)
+    x2, y2 = point_2
+    distance_2 = (x2**2 + y2**2) ** 0.5
+    print(distance_2 <= radius)
+    print()
+
+
+if __name__ == "__main__":
+    solve()

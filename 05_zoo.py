@@ -1,38 +1,32 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# есть список животных в зоопарке
 
-zoo = [
-    "lion",
-    "kangaroo",
-    "elephant",
-    "monkey",
-]
+def solve():
+    print("Задание 05: Зоопарк")
+    zoo = [
+        "lion",
+        "kangaroo",
+        "elephant",
+        "monkey",
+    ]
+    zoo.insert(1, "bear")
+    print(zoo)
+    birds = [
+        "rooster",
+        "ostrich",
+        "lark",
+    ]
+    zoo.extend(birds)
+    print(zoo)
+    zoo.remove("elephant")
+    print(zoo)
+    lion_cage = zoo.index("lion") + 1
+    lark_cage = zoo.index("lark") + 1
+    print("Лев сидит в клетке №", lion_cage)
+    print("Жаворонок сидит в клетке №", lark_cage)
+    print()
 
-# посадите медведя (bear) между львом и кенгуру
-#  и выведите список на консоль
-zoo.insert(1, "bear")
-print(zoo)
 
-# добавьте птиц из списка birds в последние клетки зоопарка
-birds = [
-    "rooster",
-    "ostrich",
-    "lark",
-]
-#  и выведите список на консоль
-zoo.extend(birds)
-print(zoo)
-
-# уберите слона
-#  и выведите список на консоль
-zoo.remove("elephant")
-print(zoo)
-
-# выведите на консоль в какой клетке сидит лев (lion) и жаворонок (lark).
-# Номера при выводе должны быть понятны простому человеку, не программисту.
-lion_cage = zoo.index("lion") + 1
-lark_cage = zoo.index("lark") + 1
-print("Лев сидит в клетке №", lion_cage)
-print("Жаворонок сидит в клетке №", lark_cage)
+if __name__ == "__main__":
+    solve()

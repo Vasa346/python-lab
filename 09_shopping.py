@@ -1,45 +1,33 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Есть словарь магазинов с распродажами
 
-shops = {
-    "ашан": [
-        {"name": "печенье", "price": 10.99},
-        {"name": "конфеты", "price": 34.99},
-        {"name": "карамель", "price": 45.99},
-        {"name": "пирожное", "price": 67.99},
-    ],
-    "пятерочка": [
-        {"name": "печенье", "price": 9.99},
-        {"name": "конфеты", "price": 32.99},
-        {"name": "карамель", "price": 46.99},
-        {"name": "пирожное", "price": 59.99},
-    ],
-    "магнит": [
-        {"name": "печенье", "price": 11.99},
-        {"name": "конфеты", "price": 30.99},
-        {"name": "карамель", "price": 41.99},
-        {"name": "пирожное", "price": 62.99},
-    ],
-}
+def solve():
+    print("Задание 09: Магазины")
+    sweets = {
+        "печенье": [
+            {"shop": "пятерочка", "price": 9.99},
+            {"shop": "ашан", "price": 10.99},
+        ],
+        "конфеты": [
+            {"shop": "магнит", "price": 30.99},
+            {"shop": "пятерочка", "price": 32.99},
+        ],
+        "карамель": [
+            {"shop": "магнит", "price": 41.99},
+            {"shop": "ашан", "price": 45.99},
+        ],
+        "пирожное": [
+            {"shop": "пятерочка", "price": 59.99},
+            {"shop": "магнит", "price": 62.99},
+        ],
+    }
+    for sweet, shop_list in sweets.items():
+        print(sweet + ":")
+        for shop_info in shop_list:
+            print("  ", shop_info["shop"], "-", shop_info["price"])
+    print()
 
-# Создайте словарь цен на продукты с 2 минимальными ценами
-sweets = {
-    "печенье": [{"shop": "пятерочка", "price": 9.99}, {"shop": "ашан", "price": 10.99}],
-    "конфеты": [
-        {"shop": "магнит", "price": 30.99},
-        {"shop": "пятерочка", "price": 32.99},
-    ],
-    "карамель": [{"shop": "магнит", "price": 41.99}, {"shop": "ашан", "price": 45.99}],
-    "пирожное": [
-        {"shop": "пятерочка", "price": 59.99},
-        {"shop": "магнит", "price": 62.99},
-    ],
-}
 
-# Вывод для проверки
-for sweet, shop_list in sweets.items():
-    print(sweet + ":")
-    for shop_info in shop_list:
-        print("  ", shop_info["shop"], "-", shop_info["price"])
+if __name__ == "__main__":
+    solve()
