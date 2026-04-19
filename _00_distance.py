@@ -8,9 +8,7 @@ def solve():
         "London": (510, 510),
         "Paris": (480, 480),
     }
-
     distances = {}
-
     for city1 in sites:
         distances[city1] = {}
         for city2 in sites:
@@ -18,11 +16,11 @@ def solve():
             x2, y2 = sites[city2]
             distance = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
             distances[city1][city2] = round(distance, 2)
-
-    print("Задание 00: Расстояния между городами")
-    print(distances)
-    print()
+    return distances
 
 
 if __name__ == "__main__":
-    solve()
+    result = solve()
+    print("Задание 00: Расстояния между городами")
+    print(result)
+    print()

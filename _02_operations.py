@@ -3,13 +3,14 @@
 
 
 def solve():
-    print("Задание 02: Операции")
-    result = (1 + 2) * 3
-    print(result)
-    result = 1 * (2 + 3) * 4 + 5
-    print(result)
-    print()
+    result1 = (1 + 2) * 3
+    result2 = 1 * (2 + 3) * 4 + 5
+    return result1, result2
 
 
 if __name__ == "__main__":
-    solve()
+    r1, r2 = solve()
+    print("Задание 02: Операции")
+    print(r1)
+    print(r2)
+    print()

@@ -3,8 +3,6 @@
 
 
 def solve():
-    print("Задание 04: Моя семья")
-    my_family = ["папа", "мама", "я", "бабушка", "дедушка"]
     my_family_height = [
         ["папа", 182],
         ["мама", 168],
@@ -12,17 +10,14 @@ def solve():
         ["бабушка", 160],
         ["дедушка", 178],
     ]
-    print("Рост отца -", my_family_height[0][1], "см")
-    total_height = (
-        my_family_height[0][1]
-        + my_family_height[1][1]
-        + my_family_height[2][1]
-        + my_family_height[3][1]
-        + my_family_height[4][1]
-    )
-    print("Общий рост моей семьи -", total_height, "см")
-    print()
+    father_height = my_family_height[0][1]
+    total_height = sum(h[1] for h in my_family_height)
+    return father_height, total_height
 
 
 if __name__ == "__main__":
-    solve()
+    fh, th = solve()
+    print("Задание 04: Моя семья")
+    print("Рост отца -", fh, "см")
+    print("Общий рост моей семьи -", th, "см")
+    print()

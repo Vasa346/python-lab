@@ -3,7 +3,6 @@
 
 
 def solve():
-    print("Задание 10: Склад")
     goods = {
         "Лампа": "12345",
         "Стол": "23456",
@@ -22,47 +21,48 @@ def solve():
     }
 
     lamp_code = goods["Лампа"]
-    lamp_item = store[lamp_code][0]
-    lamp_quantity = lamp_item["quantity"]
-    lamp_price = lamp_item["price"]
-    lamp_cost = lamp_quantity * lamp_price
-    print("Лампа -", lamp_quantity, "шт, стоимость", lamp_cost, "руб")
+    lamp_qty = store[lamp_code][0]["quantity"]
+    lamp_cost = lamp_qty * store[lamp_code][0]["price"]
 
     table_code = goods["Стол"]
-    table_item1 = store[table_code][0]
-    table_item2 = store[table_code][1]
-    table_quantity = table_item1["quantity"] + table_item2["quantity"]
+    table_qty = store[table_code][0]["quantity"] + store[table_code][1]["quantity"]
     table_cost = (
-        table_item1["quantity"] * table_item1["price"]
-        + table_item2["quantity"] * table_item2["price"]
+        store[table_code][0]["quantity"] * store[table_code][0]["price"]
+        + store[table_code][1]["quantity"] * store[table_code][1]["price"]
     )
-    print("Стол -", table_quantity, "шт, стоимость", table_cost, "руб")
 
     sofa_code = goods["Диван"]
-    sofa_item1 = store[sofa_code][0]
-    sofa_item2 = store[sofa_code][1]
-    sofa_quantity = sofa_item1["quantity"] + sofa_item2["quantity"]
+    sofa_qty = store[sofa_code][0]["quantity"] + store[sofa_code][1]["quantity"]
     sofa_cost = (
-        sofa_item1["quantity"] * sofa_item1["price"]
-        + sofa_item2["quantity"] * sofa_item2["price"]
+        store[sofa_code][0]["quantity"] * store[sofa_code][0]["price"]
+        + store[sofa_code][1]["quantity"] * store[sofa_code][1]["price"]
     )
-    print("Диван -", sofa_quantity, "шт, стоимость", sofa_cost, "руб")
 
     chair_code = goods["Стул"]
-    chair_item1 = store[chair_code][0]
-    chair_item2 = store[chair_code][1]
-    chair_item3 = store[chair_code][2]
-    chair_quantity = (
-        chair_item1["quantity"] + chair_item2["quantity"] + chair_item3["quantity"]
+    chair_qty = (
+        store[chair_code][0]["quantity"]
+        + store[chair_code][1]["quantity"]
+        + store[chair_code][2]["quantity"]
     )
     chair_cost = (
-        chair_item1["quantity"] * chair_item1["price"]
-        + chair_item2["quantity"] * chair_item2["price"]
-        + chair_item3["quantity"] * chair_item3["price"]
+        store[chair_code][0]["quantity"] * store[chair_code][0]["price"]
+        + store[chair_code][1]["quantity"] * store[chair_code][1]["price"]
+        + store[chair_code][2]["quantity"] * store[chair_code][2]["price"]
     )
-    print("Стул -", chair_quantity, "шт, стоимость", chair_cost, "руб")
-    print()
+
+    return (
+        (lamp_qty, lamp_cost),
+        (table_qty, table_cost),
+        (sofa_qty, sofa_cost),
+        (chair_qty, chair_cost),
+    )
 
 
 if __name__ == "__main__":
-    solve()
+    lamp, table, sofa, chair = solve()
+    print("Задание 10: Склад")
+    print("Лампа -", lamp[0], "шт, стоимость", lamp[1], "руб")
+    print("Стол -", table[0], "шт, стоимость", table[1], "руб")
+    print("Диван -", sofa[0], "шт, стоимость", sofa[1], "руб")
+    print("Стул -", chair[0], "шт, стоимость", chair[1], "руб")
+    print()

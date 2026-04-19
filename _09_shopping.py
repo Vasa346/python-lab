@@ -3,7 +3,6 @@
 
 
 def solve():
-    print("Задание 09: Магазины")
     sweets = {
         "печенье": [
             {"shop": "пятерочка", "price": 9.99},
@@ -22,12 +21,14 @@ def solve():
             {"shop": "магнит", "price": 62.99},
         ],
     }
+    return sweets
+
+
+if __name__ == "__main__":
+    sweets = solve()
+    print("Задание 09: Магазины")
     for sweet, shop_list in sweets.items():
         print(sweet + ":")
         for shop_info in shop_list:
             print("  ", shop_info["shop"], "-", shop_info["price"])
     print()
-
-
-if __name__ == "__main__":
-    solve()

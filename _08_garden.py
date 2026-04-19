@@ -1,35 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 def solve():
-    print("Задание 08: Сад и луг")
-    garden = (
-        "ромашка",
-        "роза",
-        "одуванчик",
-        "ромашка",
-        "гладиолус",
-        "подсолнух",
-        "роза",
-    )
-    meadow = (
-        "клевер",
-        "одуванчик",
-        "ромашка",
-        "клевер",
-        "мак",
-        "одуванчик",
-        "ромашка",
-    )
+    garden = ('ромашка', 'роза', 'одуванчик', 'ромашка', 'гладиолус', 'подсолнух', 'роза')
+    meadow = ('клевер', 'одуванчик', 'ромашка', 'клевер', 'мак', 'одуванчик', 'ромашка')
     garden_set = set(garden)
     meadow_set = set(meadow)
-    print("Все виды цветов:", garden_set | meadow_set)
-    print("Растут и в саду, и на лугу:", garden_set & meadow_set)
-    print("Растут только в саду:", garden_set - meadow_set)
-    print("Растут только на лугу:", meadow_set - garden_set)
+
+    all_flowers = garden_set | meadow_set
+    both = garden_set & meadow_set
+    only_garden = garden_set - meadow_set
+    only_meadow = meadow_set - garden_set
+
+    return all_flowers, both, only_garden, only_meadow
+
+if __name__ == '__main__':
+    a, b, og, om = solve()
+    print("Задание 08: Сад и луг")
+    print('Все виды цветов:', a)
+    print('Растут и в саду, и на лугу:', b)
+    print('Растут только в саду:', og)
+    print('Растут только на лугу:', om)
     print()
-
-
-if __name__ == "__main__":
-    solve()
