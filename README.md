@@ -25,6 +25,7 @@
 ## Скриншоты результатов
 1. История коммитов (git log --oneline)
 <img width="936" height="304" alt="изображение" src="https://github.com/user-attachments/assets/3056f82f-5f9f-401b-bad2-ffe1c07c1e50" />
+
  
  2. Результат выполнения тестов pytest (11 passed)
 <img width="945" height="382" alt="изображение" src="https://github.com/user-attachments/assets/b2bb0dae-43d3-4a9d-82d8-f2f248b9490f" />
