@@ -24,7 +24,6 @@
 
 ## Скриншоты результатов
 <img width="836" height="222" alt="изображение" src="https://github.com/user-attachments/assets/07e71e17-335a-4e59-a6cb-643653ca633d" />
-<img width="1103" height="812" alt="изображение" src="https://github.com/user-attachments/assets/88983ca7-0ede-457e-b3a2-bacc0597d160" />
 <img width="945" height="382" alt="изображение" src="https://github.com/user-attachments/assets/b2bb0dae-43d3-4a9d-82d8-f2f248b9490f" />
 
 ## Ссылки на используемые материалы
